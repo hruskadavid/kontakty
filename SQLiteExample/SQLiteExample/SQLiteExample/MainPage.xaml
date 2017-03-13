@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SQLiteExample.MainPage">
+  <ContentPage.Content>
+    <Grid HeightRequest="140">
+      <Grid.ColumnDefinitions >
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+
+      <Grid.RowDefinitions>
+        <RowDefinition Height="110"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+
+      <Grid HeightRequest="140">
+        <Grid.ColumnDefinitions >
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Text="Kontaky" Grid.Row="0" Grid.Column="0" FontSize="39" x:Name="text"/>
+        <Button Clicked="pridat" Text="Přidat +" Grid.Row="0" Grid.Column="1" />
+      </Grid>
+
+
+      <ListView x:Name="PeopleListViewFormatted" Grid.Row="1">
+        
+                <Label Text="{Binding GetName}" FontAttributes="Bold" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="{Binding Age}" Grid.Row="1"  Grid.Column="1"/>
+             
+      </ListView>
+
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>

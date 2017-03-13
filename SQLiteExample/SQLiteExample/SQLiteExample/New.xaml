@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SQLiteExample.Page1">
+  <ContentPage.Content>
+    <Grid Margin="0, 15, 0, 0">
+      <Grid.ColumnDefinitions >
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="1.3*"/>
+      </Grid.ColumnDefinitions>
+
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <Label Text="Novy kontakt" Grid.Row="0" Grid.Column="0" FontSize="39"/>
+      <Button Clicked="ulozit" Text="Uložit" Grid.Row="0" Grid.Column="1" />
+
+      <Label Text="Jméno:" Grid.Row="1" Grid.Column="0"/>
+      <TextView Placeholder="Santa" Grid.Row="1" Grid.Column="1" x:Name="jmeno"/>
+
+      <Label Text="Přijmení:" Grid.Row="2" Grid.Column="0"/>
+      <TextView Placeholder="Kraus" Grid.Row="2" Grid.Column="1" x:Name="prijmeni" />
+
+      <Label Text="Datum narození:" Grid.Row="3" Grid.Column="0"/>
+
+      <Label Text="Telefon:" Grid.Row="4" Grid.Column="0" />
+      <TextView Keyboard="Numeric" Placeholder="420 069 007" Grid.Row="4" Grid.Column="1" x:Name="phone"/>
+
+    </Grid>
+
+  </ContentPage.Content>
+</ContentPage>
